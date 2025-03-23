@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number guess</title>
+</head>
+
+<body>
+    <script>
+        let no = 42;
+        let trys = 0;
+        let guess;
+
+        while (guess != no) {
+            guess = prompt("Guess the number:");
+            trys++;
+        }
+        document.write("Congratulations! You guessed it in " + trys + " attempts.");
+    </script>
+</body>
+
+</html>

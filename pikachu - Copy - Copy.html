@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pikachucc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+        }
+
+        span {
+            color: #6b7280;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo span {
+            color: #4a90e2;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cta-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .cta-buttons .login {
+            background-color: white;
+            color: #333;
+            border: 1px solid #e5e7eb;
+        }
+
+        .cta-buttons .signup {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 40px;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            color: #333;
+        }
+
+        .hero-text span {
+            color: #4a90e2;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #6b7280;
+        }
+
+        .contact-btn {
+            padding: 12px 24px;
+            background: #4a90e2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .hero-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .doctor-card2 {
+            position: relative; /* Adjusted position for alignment */
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 160px;
+        }
+
+        .doctor-card2 img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .doctor-card2 p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .doctor-card2 span {
+            color: gray;
+        }
+
+        #scd {
+            background-color: #b3ceec;
+            color: #3083e2;
+        }
+
+        /* Highlighted changes for reverse layout */
+        .hero.reverse {
+            flex-direction: row-reverse; /* Reverse the layout */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Other sections of the code remain the same -->
+
+    <div class="hero reverse">
+        <div class="hero-text">
+            <p id="blue"> Find Doctor</p>
+            <h1>Find the right doctor according to your complaint</h1>
+            <p>HealthCare.ly is a free, health app that goes beyond matching you with doctors. It actively helps you find the right doctor based on your medical and personal needs and connects you with your HealthCarely community for ongoing support throughout your journey to healthier living.</p>
+            <div class="blue-tick-list-container">
+                <ul class="blue-tick-list">
+                    <li>100% free app designed to help you find the right doctor for you. </li>
+                    <li>Available 900 doctors specialist</li>
+                </ul>
+            </div>
+            <button class="contact-btn">See the doctors</button>
+        </div>
+        <div class="hero-image">
+            <img src="./female-doctor_fococlipping_removed 2.png" alt="Hero">
+            <div class="doctor-card2">
+                <img src="./female-doctor_fococlipping_removed 2.png" alt="Doctor">
+                <p>Dr. Samantha<br><span>Specialist</span></p>
+                <button class="schedule-btn" id="scd">Find Doctor</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Nexcent. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

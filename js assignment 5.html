@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <ul class="students"></ul>
+    <script>
+        const students = [{ name: "Areen", grade: "A+" },{ name: "Fatima", grade: "B" },{ name: "Ayesha", grade: "C" },{ name: "Zainii", grade: "D" }];
+        const list = document.querySelector(".students");
+        for (let i = 0; i < students.length; i++) {
+            const student = students[i];
+            const studentsNames = document.createElement("li");
+            studentsNames.innerHTML = student.name;
+            studentsNames.style.cursor = "pointer";
+            studentsNames.addEventListener("click", function() {
+                studentsNames.innerHTML = student.name + " - Grade: " + student.grade;
+            });
+            list.appendChild(studentsNames);
+        }
+    </script>
+</body>
+</html>

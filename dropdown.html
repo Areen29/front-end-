@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <select id="main">
+        <option value="">Select any object</option>
+    </select>
+
+    <select id="sub">
+        <option value="">Select any option</option>
+    </select>
+
+    <script>
+        let json = {
+            "fruits": ["Apple", "Mango", "Strawberry"],
+            "vegetables": ["Potato", "Tomato", "Cabbage"]
+        };
+        for (const key in json) {
+            $('#main').append(`<option value="${key}">${key}</option>`);
+        }
+        $('#main').change(function() {
+            let selected = $(this).val();
+            $('#sub').empty().append(`<option value="">Select any option</option>`);
+
+            if (selected) {
+                for (const element of json[selected]) {
+                    $('#sub').append(`<option value="${element}">${element}</option>`);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

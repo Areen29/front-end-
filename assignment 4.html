@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3x3 Grid with Technologies</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      grid-template-rows: repeat(3, 150px);
+      gap: 0;
+    }
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(219, 129, 166);
+      padding: 10px;
+      cursor: pointer; 
+    }
+    .orange:hover {
+      background-color: rgb(231, 46, 93);
+    }
+    .light-green {
+      background-color: lightgreen;
+      color: black;
+    }
+    li:hover {
+      background-color: rgb(161, 31, 144);
+    }
+    ul {
+      list-style-type: none;
+    }
+    li {
+      padding: 5px;
+    }
+    ul:hover {
+      background-color: rgb(238, 91, 243);
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="cell light-green"></div>
+    <div class="cell light-green">Server-side Technologies</div>
+    <div class="cell light-green">Client-side Technologies</div>
+    <div class="cell light-green">compiled</div>
+    <div class="cell orange">
+      <ul>
+        <li>Dev C++</li>
+        <li>C#</li>
+        <li>VD Detnet</li>
+      </ul>
+    </div>
+    <div class="cell orange">
+      <ul>
+        <li>ASM</li>
+        <li>Flash</li>
+        <li>Java Script</li>
+      </ul>
+    </div>
+    <div class="cell light-green">interpreted</div>
+    <div class="cell orange">
+      <ul>
+        <li>PHP</li>
+        <li>Js.node</li>
+        <li>Python</li>
+      </ul>
+    </div>
+    <div class="cell orange">
+      <ul>
+        <li>Jquery</li>
+        <li>Ajax</li>
+        <li>Js.react</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

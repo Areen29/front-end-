@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkboard Pattern</title>
+    <style>
+        .checkboard {
+            width: 400px; /* 8 squares * 50px */
+            height: 400px; /* 8 squares * 50px */
+            overflow: hidden;
+        }
+        .checkboard div {
+            width: 50px;
+            height: 50px;
+            float: left;
+        }
+        /* Black squares */
+        .checkboard div:nth-child(16n+1),
+        .checkboard div:nth-child(16n+3),
+        .checkboard div:nth-child(16n+5),
+        .checkboard div:nth-child(16n+7),
+        .checkboard div:nth-child(16n+10),
+        .checkboard div:nth-child(16n+12),
+        .checkboard div:nth-child(16n+14),
+        .checkboard div:nth-child(16n+16) {
+            background-color: black;
+        }
+        /* Black squares for even rows */
+        .checkboard div:nth-child(16n+2),
+        .checkboard div:nth-child(16n+4),
+        .checkboard div:nth-child(16n+6),
+        .checkboard div:nth-child(16n+8),
+        .checkboard div:nth-child(16n+9),
+        .checkboard div:nth-child(16n+11),
+        .checkboard div:nth-child(16n+13),
+        .checkboard div:nth-child(16n+15) {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkboard">
+        <!-- Generate 64 divs -->
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </div>
+</body>
+</html>

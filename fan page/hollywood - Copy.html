@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p:nth-child(1),
+        div p:nth-child(3),
+            div p:nth-child(5),
+            div p:nth-child(7),
+            div p:nth-child(9)
+            {
+            color:rgb(189, 23, 32)
+
+        }
+        div p:nth-child(2),
+            div p:nth-child(4),
+            div p:nth-child(6),
+            div p:nth-child(8)
+            {color: darkgoldenrod;
+        }
+        
+            a:hover{
+                color: brown;
+                text-decoration: none;
+                background-color: blue;
+            }
+        
+        
+        
+        div+ p{
+            font-weight: bold;
+        }
+        div ~ p{
+            /* font-style: italic; */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Here's a Header</h1>
+        <p>I'm a paragraph with all kinds of information</p>
+        <p>Let's add another paragraph for fun</p>
+        <p>Yadda Yadda Yadda</p>
+        <p>blah blah blah</p>
+        <p>Yadda Yadda Yadda Yadda</p>
+        <h1>Here's a Subheader</h1>
+        <p>blah blah blah</p>
+        <p>and maybe just one more</p>
+    </div>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti suscipit ipsa, dolorum ipsum ipsam reprehenderit perspiciatis autem omnis modi magnam animi aliquid. Doloremque porro vero aspernatur repudiandae impedit maiores excepturi.</p> -->
+</body>
+</html>

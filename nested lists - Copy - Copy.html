@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Triangle</title>
+</head>
+<body>
+    <script>
+      
+
+let amount = prompt("Enter the withdrawal amount: ")
+
+let notes1000 = amount / 1000
+amount %= 1000
+let notes500 = amount / 500
+amount %= 500
+let notes100 = amount / 100
+
+document.write("Notes:")
+document.write(notes1000 + " x 1000" + "")
+document.write(notes500 + " x 500" + "")
+document.write(notes100 + " x 100" + "")
+    </script>
+  </body>
+  
+</html>

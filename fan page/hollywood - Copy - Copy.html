@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technologies Grid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto 1fr 1fr;
+            height: 100vh;
+            background-color: #333;
+            color: #f5f5cc;
+        }
+
+        .server-side {
+            grid-column: 1 / 3;
+            grid-row: 1;
+            background-color: #f5f5cc;
+            color: #333;
+            padding: 20px;
+        }
+
+        .server-side h2 {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .server-side .items {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 10px 0 0;
+        }
+
+        .client-side {
+            grid-column: 3 / 4;
+            grid-row: 1;
+            background-color: #f5f5cc;
+            color: #333;
+            padding: 20px;
+        }
+
+        .client-side h2 {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .client-side .items {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 10px 0 0;
+        }
+
+        .compiled {
+            grid-column: 1 / 2;
+            grid-row: 2;
+            background-color: #f5f5cc;
+            color: #333;
+            padding: 20px;
+        }
+
+        .compiled h3 {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .compiled .items {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 10px 0 0;
+        }
+
+        .interpreted {
+            grid-column: 1 / 2;
+            grid-row: 3;
+            background-color: #f5f5cc;
+            color: #333;
+            padding: 20px;
+        }
+
+        .interpreted h3 {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .interpreted .items {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 10px 0 0;
+        }
+
+        .items p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="server-side">
+            <h2>Server-side technologies</h2>
+            <div class="items">
+                <p>C# DotNet</p>
+                <p>C++</p>
+                <p>VB DotNet</p>
+                <p>PHP</p>
+                <p>NodeJS</p>
+                <p>Python</p>
+            </div>
+        </div>
+
+        <div class="client-side">
+            <h2>Client-side technologies</h2>
+            <div class="items">
+                <p>ASM JS</p>
+                <p>Flash</p>
+                <p>Java Applet</p>
+                <p>JS</p>
+                <p>VBScript</p>
+                <p>AJAX</p>
+            </div>
+        </div>
+
+        <div class="compiled">
+            <h3>Compiled</h3>
+            <div class="items">
+                <p>C# DotNet</p>
+                <p>C++</p>
+                <p>VB DotNet</p>
+                <p>ASM JS</p>
+                <p>Flash</p>
+                <p>Java Applet</p>
+            </div>
+        </div>
+
+        <div class="interpreted">
+            <h3>Interpreted</h3>
+            <div class="items">
+                <p>PHP</p>
+                <p>NodeJS</p>
+                <p>Python</p>
+                <p>JS</p>
+                <p>VBScript</p>
+                <p>AJAX</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

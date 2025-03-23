@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+</head>
+<body>
+    <script>
+        let amount = prompt("Enter the amount:");
+        amount = amount - 0;  
+        if (amount > 0) {
+            document.write("Amount =<br>" + amount + ":</h2>");
+            let note5000 = amount / 5000;
+            amount = amount % 5000;
+            if (note5000 >= 1) document.write("5000 x " + (note5000 - (note5000 % 1)) + "<br>");
+            let note1000 = amount / 1000;
+            amount = amount % 1000;
+            if (note1000 >= 1) document.write("1000 x " + (note1000 - (note1000 % 1)) + "<br>");
+            let note500 = amount / 500;
+            amount = amount % 500;
+            if (note500 >= 1) document.write("500 x " + (note500 - (note500 % 1)) + "<br>");
+            let note100 = amount / 100;
+            amount = amount % 100;
+            if (note100 >= 1) document.write("100 x " + (note100 - (note100 % 1)) + "<br>");
+            let note50 = amount / 50;
+            amount = amount % 50;
+            if (note50 >= 1) document.write("50 x " + (note50 - (note50 % 1)) + "<br>");
+            let note10 = amount / 10;
+            amount = amount % 10;
+            if (note10 >= 1) document.write("10 x " + (note10 - (note10 % 1)) + "<br>");
+        } 
+        
+         else  {
+            document.write("<h2>Please enter a valid amount!</h2>");
+        }
+    </script>
+
+</body>
+</html>

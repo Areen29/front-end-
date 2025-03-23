@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart System</title>
+</head>
+<body>
+    <script>
+        function total(prices) {
+            let total = 0;
+            for (let i = 0; i < prices.length; i++) {
+                total = total + prices[i];
+            }
+            return total;
+        }
+        function discounts(total) {
+            let discount = 0;
+            let percent = 0;
+            if (total >= 1000) {
+                discount = total * 0.20; 
+                percent = 20;
+            } else if (total >= 500) {
+                discount = total * 0.10; 
+                percent = 10;
+            }
+            let finalPrices = total - discount;
+            return { finalPrices, discount, percent };
+        }
+        let productPrice = [];
+        let productno=0;
+        let noOfProducts = parseInt(prompt("Enter the number of products in your cart:"));
+        for (let i = 0; i < noOfProducts; i++) {
+            let price = parseFloat(prompt("Enter the price of product " + productno + ":"));
+            productPrice.push(price);
+        }
+        const totalPrice = total(productPrice);
+        const { finalPrices, discount, percent } = discounts(totalPrice);
+        if (percent > 0) {
+            document.write("Total Price: Rs" + totalPrice + "<br>");
+            document.write("After " + percent + "% Discount: Rs" + finalPrices + "<br>");
+        } else {
+            document.write("Total Price: Rs" + totalPrice + "<br>");
+            document.write("No Discount Applied.<br>");
+        }
+    </script>
+</body>
+</html>

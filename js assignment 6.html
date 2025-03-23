@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</head>
+<body>
+
+    <h2>Filter Ice Creams</h2>
+    <label for="flavor">Choose Flavor:</label>
+    <select id="flavor">
+        <option value="all">All Flavors</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="vanilla">Vanilla</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="butter_scotch">Butter Scotch</option>
+        <option value="caramel_crunch">Caramel Crunch</option>
+        <option value="pista">Pista</option>
+        <option value="mango">Mango</option>
+        <option value="kulfi">Kulfi</option>
+    </select>
+
+    <label for="type">Choose Type:</label>
+    <select id="type">
+        <option value="all">All Types</option>
+        <option value="cone">Cone</option>
+        <option value="cup">Cup</option>
+    </select>
+
+    <div class="ice-cream-list">
+        <div class="ice-cream-item" data-flavor="chocolate" data-type="cone">Chocolate Cone</div>
+        <div class="ice-cream-item" data-flavor="vanilla" data-type="cup">Vanilla Cup</div>
+        <div class="ice-cream-item" data-flavor="strawberry" data-type="cone">Strawberry Cone</div>
+        <div class="ice-cream-item" data-flavor="butter_scotch" data-type="cup">Butter Scotch Cup</div>
+        <div class="ice-cream-item" data-flavor="caramel_crunch" data-type="cone">Caramel Crunch Cone</div>
+        <div class="ice-cream-item" data-flavor="pista" data-type="cup">Pista Cup</div>
+        <div class="ice-cream-item" data-flavor="mango" data-type="cone">Mango Cone</div>
+        <div class="ice-cream-item" data-flavor="kulfi" data-type="cup">Kulfi Cup</div>
+        <div class="ice-cream-item" data-flavor="chocolate" data-type="cup">Chocolate Cup</div>
+        <div class="ice-cream-item" data-flavor="vanilla" data-type="cone">Vanilla Cone</div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            function filterIceCreams() {
+                var selectedFlavor = $('#flavor').val();
+                var selectedType = $('#type').val();
+
+                $('.ice-cream-item').each(function(){
+                    var flavor = $(this).data('flavor');
+                    var type = $(this).data('type');
+
+                    if ((selectedFlavor === 'all' || flavor === selectedFlavor) && 
+                        (selectedType === 'all' || type === selectedType)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            }
+
+            $('#flavor, #type').change(function(){
+                filterIceCreams();
+            });
+
+            filterIceCreams();
+        });
+    </script>
+
+</body>
+</html>

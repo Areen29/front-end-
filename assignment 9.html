@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Balls with Shadows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease-in-out;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(./bk.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 400px;
+            height: 500px;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .ball {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 50px;
+            animation: bounce 3s infinite alternate ease-in-out;
+            box-shadow: -10px 50px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .ball:nth-child(1) {
+            background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);
+            animation-duration: 2s;
+        }
+
+        .ball:nth-child(2) {
+            background: radial-gradient(circle at 65% 15%, white 1px, pink 3%, red 60%, pink 100%);
+            animation-duration: 3s;
+        }
+
+        .ball:nth-child(3) {
+            background: radial-gradient(circle at 65% 15%, white 1px, yellow 3%, orange 60%, yellow 100%);
+            animation-duration: 1s;
+        }
+
+        .ball:nth-child(4) {
+            background: radial-gradient(circle at 65% 15%, white 1px, lightgreen 3%, green 60%, lightgreen 100%);
+            animation-duration: 4s;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+                box-shadow: -10px 50px 50px rgba(0, 0, 0, 0.5);
+            }
+            to {
+                transform: translateY(-400px);
+                box-shadow: -10px 20px 30px rgba(0, 0, 0, 0.3);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+</body>
+</html>

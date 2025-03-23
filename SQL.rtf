@@ -1,0 +1,835 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset1 Segoe UI Symbol;}}
+{\colortbl ;\red0\green77\blue187;}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs40\lang9\par
+**What is a database?**  \par
+\par
+A **database** ek digital system hai jo data ko store, organize, aur manage karta hai taki usko easily access aur update kiya ja sake. Yeh ek tarah ka computerized record-keeping system hota hai jo different types ki information ko efficiently handle karta hai.  \par
+\par
+### **Why is a database useful?**  \par
+- **Data storage** \f1\endash  Information safe aur organized rehti hai.  \par
+- **Fast access** \endash  Zaroori data ko jaldi search aur retrieve kiya ja sakta hai.  \par
+- **Easy management** \endash  Data ko modify, delete aur update karna simple hota hai.  \par
+- **Security** \endash  Important information secure rehti hai, sirf authorized users access kar sakte hain.  \par
+\par
+### **Types of Databases:**  \par
+1. **Relational Database (SQL)** \endash  Structured format mein tables ke form mein data store hota hai. *(Example: MySQL, PostgreSQL, SQLite)*  \par
+2. **NoSQL Database** \endash  Flexible aur schema-free hote hain, mostly big data aur real-time applications ke liye use hote hain. *(Example: MongoDB, Firebase)*  \par
+3. **Cloud Database** \endash  Online hosted hote hain jo internet se access kiye ja sakte hain. *(Example: Google Cloud Firestore, AWS RDS)*  \par
+4. **Graph Database** \endash  Nodes aur relationships ke form mein data store hota hai, jo complex connections handle karne ke liye useful hota hai. *(Example: Neo4j)*  \par
+5. **In-Memory Database** \endash  Super-fast storage jo RAM mein data rakhta hai, mostly real-time processing ke liye use hota hai. *(Example: Redis)*  \par
+\par
+### **What is DBMS?**  \par
+A **Database Management System (DBMS)** ek software hai jo databases ko create, manage, aur control karne ke liye use hota hai. Yeh users ko data store, retrieve, update, aur delete karne ki facility deta hai.  \par
+\par
+\f2\u-10179?\u-8903?\f0  **Examples**: MySQL, PostgreSQL, MongoDB, Oracle  \par
+\par
+### **DBMS vs File System**  \par
+\par
+| Feature         | DBMS  | File System  |\par
+|---------------|--------|------------|\par
+| **Data Organization** | Structured (Tables, Relations) | Unstructured (Files, Folders) |\par
+| **Data Security** | High (Access Control) | Low (Limited Security) |\par
+| **Data Integrity** | Maintained (Constraints) | No built-in integrity check |\par
+| **Data Redundancy** | Reduced (Normalization) | High (Duplicate Files) |\par
+| **Data Access** | Fast (Queries) | Slow (Manual Search) |\par
+| **Multi-User Support** | Yes | Limited |\par
+\par
+### **Main Difference**  \par
+File system sirf data store karta hai, jabki **DBMS data ko organize, secure, aur efficiently manage karta hai**.\par
+\par
+**DBMS (Database Management System)** ke use karne ke kai **advantages** hain:\par
+\par
+### 1. **Data Redundancy Control**  \par
+DBMS me data ko organize karke redundancy ko minimize kiya jata hai, yani ek hi data ka duplicate version nahi hota.\par
+\par
+### 2. **Data Integrity**  \par
+DBMS me **data consistency** aur accuracy maintain hoti hai, kyunki constraints aur rules lagaye jaate hain.\par
+\par
+### 3. **Data Security**  \par
+DBMS me authorized users ko access diya jaata hai aur sensitive data ko protect karne ke liye encryption aur authentication features hote hain.\par
+\par
+### 4. **Easy Data Access**  \par
+DBMS me **structured queries (SQL)** ke through data ko easily search, retrieve, aur update kiya ja sakta hai.\par
+\par
+### 5. **Multi-User Support**  \par
+DBMS multiple users ko ek saath data access karne ka option deta hai without affecting the performance.\par
+\par
+### 6. **Backup & Recovery**  \par
+Agar data loss hota hai toh DBMS me automatic backup aur recovery features hote hain, jisse data safe rehta hai.\par
+\par
+### 7. **Data Independence**  \par
+DBMS me data aur applications ke beech independence hoti hai, yani data ko change kiya ja sakta hai bina application code ko modify kiye.\par
+\par
+### 8. **Efficient Data Management**  \par
+DBMS large amounts of data ko efficiently manage karne ki capacity rakhta hai, jisse data retrieval fast aur easy hota hai.\par
+\par
+In short, **DBMS** helps in **data organization**, **security**, **accessibility**, aur **efficiency**, making it essential for businesses and applications.\par
+\par
+**7. Data Independence**  \par
+**DBMS** me **data aur application** ke beech independence hoti hai, yani data ko change kiya ja sakta hai bina application code ko modify kiye.\par
+\par
+### **How?**  \par
+- **Physical Data Independence**: Data ko physically store karne ki method ko change kiya jaa sakta hai bina application ko affect kiye.  \par
+- **Logical Data Independence**: Data structure ko change kiya jaa sakta hai (jaise columns ya tables modify karna), bina application code ko touch kiye.\par
+\par
+Isse, **DBMS** data aur application ke beech abstraction provide karta hai, jo flexibility aur efficiency badhata hai.\par
+\par
+### **Types of Databases:**\par
+\par
+1. **Relational Database (SQL)**  \par
+   - Data tables mein store hoti hai, aur **Structured Query Language (SQL)** ka use hota hai.  \par
+   - Example: **MySQL, PostgreSQL, Oracle**\par
+\par
+2. **NoSQL Database**  \par
+   - Schema-free aur flexible hota hai, mostly large-scale data aur real-time applications ke liye.  \par
+   - Example: **MongoDB, Firebase**\par
+\par
+3. **Cloud Database**  \par
+   - Online hosted hoti hai, jo internet se access ki ja sakti hai.  \par
+   - Example: **Google Cloud Firestore, AWS RDS**\par
+\par
+4. **Graph Database**  \par
+   - Data ko nodes aur relationships ke form mein store kiya jata hai, jo complex connections ko handle karta hai.  \par
+   - Example: **Neo4j**\par
+\par
+5. **In-Memory Database**  \par
+   - Data ko RAM mein store karta hai, jo super-fast access provide karta hai.  \par
+   - Example: **Redis**\par
+\par
+6. **Object-Oriented Database**  \par
+   - Data ko objects ki form mein store kiya jata hai, jo object-oriented programming languages se closely related hota hai.  \par
+   - Example: **ObjectDB**\par
+\par
+Each type has its own use case depending on the data requirements and application needs.\par
+\par
+A **relational database** ek type ka database hota hai jo **tables** (ya relations) mein data ko store karta hai. Har table rows aur columns se bana hota hai, jahan rows ko **records** aur columns ko **fields** kaha jata hai.\par
+\par
+### **Key Features of a Relational Database:**\par
+1. **Tables** \f1\endash  Data ko structured format mein tables mein store kiya jata hai.\par
+2. **Primary Key** \endash  Har record ko uniquely identify karne ke liye ek primary key hoti hai.\par
+3. **Foreign Key** \endash  Tables ke beech relationships establish karne ke liye foreign keys use hoti hain.\par
+4. **SQL** \endash  Data ko manage karne ke liye **Structured Query Language (SQL)** ka use hota hai.\par
+5. **Normalization** \endash  Data redundancy ko reduce karne ke liye normalization techniques use ki jati hain.\par
+\par
+### **Examples**:  \par
+- **MySQL**\par
+- **PostgreSQL**\par
+- **Oracle**\par
+**SQL (Structured Query Language)** ek standard programming language hai jo **relational databases** ko manage aur manipulate karne ke liye use hoti hai. Iska use data ko retrieve (select), insert, update, aur delete karne ke liye hota hai.\par
+\par
+### **Key Features of SQL:**\par
+1. **Data Retrieval** \endash  SQL ka use data ko search aur retrieve karne ke liye hota hai.  \par
+   Example: `SELECT * FROM Students;`\par
+   \par
+2. **Data Insertion** \endash  SQL ka use naye data ko insert karne ke liye hota hai.  \par
+   Example: `INSERT INTO Students (StudentID, Name, Age) VALUES (4, 'Sara Khan', 23);`\par
+\par
+3. **Data Update** \endash  SQL ka use existing data ko modify karne ke liye hota hai.  \par
+   Example: `UPDATE Students SET Age = 24 WHERE StudentID = 4;`\par
+\par
+4. **Data Deletion** \endash  SQL ka use data ko delete karne ke liye hota hai.  \par
+   Example: `DELETE FROM Students WHERE StudentID = 4;`\par
+\par
+5. **Creating and Modifying Tables** \endash  SQL ka use tables ko create aur modify karne ke liye bhi hota hai.  \par
+   Example: `CREATE TABLE Courses (CourseID INT, CourseName VARCHAR(100));`\par
+\par
+### **Common SQL Commands:**\par
+- `SELECT`: Data retrieve karna\par
+- `INSERT`: Data insert karna\par
+- `UPDATE`: Data update karna\par
+- `DELETE`: Data delete karna\par
+- `CREATE`: Table create karna\par
+- `ALTER`: Table modify karna\par
+- `DROP`: Table delete karna\par
+\par
+SQL relational databases ke saath interaction ke liye ek essential tool hai.\par
+\par
+### **DROP and ALTER in SQL:**\par
+\par
+- **`ALTER`**: Table ko modify karne ke liye use hota hai. Aap columns add, modify, ya delete kar sakte ho.\par
+  - Example: `ALTER TABLE Students ADD Address VARCHAR(255);` (Add new column)\par
+  \par
+- **`DROP`**: Table ya column ko permanently delete karne ke liye use hota hai.\par
+  - Example: `DROP TABLE Students;` (Delete entire table)\par
+\par
+---\par
+\par
+### **`VARCHAR(100)`**:  \par
+- **`VARCHAR`** ek data type hai jo text store karta hai.\par
+- **`100`** ka matlab hai ki maximum **100 characters** tak ki text store ki ja sakti hai.\par
+  - Example: `VARCHAR(100)` means you can store a text of up to 100 characters.\par
+\par
+\par
+**Entity-Relationship (ER) model**, ya **Entity-Relationship Diagram (ERD)**, ek visual representation hota hai database ki structure ka, jo dikhata hai ki alag-alag **entities** (objects ya concepts) kaise connected aur interact karte hain **relationships** ke through, symbols jaise rectangles, diamonds, aur connecting lines ka use karke.\par
+\par
+### **Key Concepts of ER Model:**\par
+\par
+1. **Entity**:  \par
+   - **Entity** kisi bhi object ya concept ko represent karta hai, jiska data database mein store hota hai.  \par
+   - Example: **Student**, **Employee**, **Course**\par
+\par
+2. **Attribute**:  \par
+   - **Attribute** ek property ya characteristic hoti hai kisi entity ki.  \par
+   - Example: **Name**, **Age**, **Address** (for **Student**)\par
+\par
+3. **Relationship**:  \par
+   - **Relationship** dikhata hai ki entities kaise ek dusre se related hoti hain.  \par
+   - Example: Ek **Student** ek **Course** mein enroll hota hai.\par
+\par
+### **Types of Relationships:**\par
+1. **One-to-One (1:1)**:  \par
+   - Ek entity dusre entity ke saath ek hi relation rakhti hai.  \par
+   - Example: Ek **Employee** ka ek hi **EmployeeID** hota hai.\par
+\par
+2. **One-to-Many (1:N)**:  \par
+   - Ek entity ka multiple relations dusre entity ke saath hota hai.  \par
+   - Example: Ek **Department** ke andar kai **Employees** ho sakte hain.\par
+\par
+3. **Many-to-Many (M:N)**:  \par
+   - Multiple entities ka relation multiple dusre entities ke saath hota hai.  \par
+   - Example: **Students** kai **Courses** mein enroll karte hain, aur **Courses** mein kai **Students** hote hain.\par
+\par
+---\par
+\par
+### **ER Diagram Example**:\par
+- **Entities**: **Student**, **Course**\par
+- **Attributes**: **Student** ka **Name**, **Age**; **Course** ka **CourseName**, **Credits**\par
+- **Relationship**: **Student** **Course** mein enroll hota hai.\par
+\par
+ER model help karta hai data ko visualize karne mein aur entities ke beech ke connections ko samajhne mein, jo database ko design aur organize karne mein asaan bana deta hai.\par
+\par
+**Normalization** ek process hai jisme hum database ko organize karte hain taaki data redundancy (duplicate data) ko minimize kiya ja sake aur data consistency maintain ho. Iska purpose hota hai tables ko aise design karna ki unmein **anomalies** (insertion, deletion, aur update anomalies) na ho.\par
+\par
+### **Why is Normalization Important?**\par
+1. **Minimizes Data Redundancy**:  \par
+   Normalization duplicate data ko eliminate karta hai, jisse storage efficient hota hai aur data consistency maintain rehti hai.\par
+\par
+2. **Improves Data Integrity**:  \par
+   Jab data redundant nahi hota, toh kisi bhi data ko update karne ya delete karne mein mistake hone ka chance kam ho jata hai.\par
+\par
+3. **Avoids Anomalies**:  \par
+   Normalization insertion, deletion, aur update anomalies ko avoid karta hai. For example, agar ek record ko delete karte ho, toh related data bhi delete ho jata hai, jo unwanted ho sakta hai.\par
+\par
+4. **Efficient Queries**:  \par
+   Normalized database mein queries run karna easy aur fast hota hai, kyunki data properly organized hota hai.\par
+\par
+### **Normalization Process**:\par
+Normalization typically multiple stages mein hota hai, jinhe **normal forms** (1NF, 2NF, 3NF, etc.) kehte hain:\par
+\par
+1. **1st Normal Form (1NF)**:  \par
+   - **Atomic** banane ka matlab hai ki har column mein sirf ek value honi chahiye (no repeating groups). Yani, har cell mein indivisible (atomic) data hona chahiye.  \par
+   - Example: Agar ek column mein **multiple phone numbers** diye hain, toh usse split karke **alag-alag rows** mein rakhna hoga.\par
+\par
+2. **2nd Normal Form (2NF)**:  \par
+   - **Partial Dependency** ka matlab hai ki non-key attributes **only part** of the primary key par depend na ho. Agar primary key **composite (multiple attributes)** hai, toh non-key attributes ko **complete primary key** par depend karna chahiye.  \par
+   - Example: Agar **StudentID** aur **CourseID** milke primary key banate hain, toh **StudentName** sirf **StudentID** par depend kar raha ho, yeh partial dependency hai. Isse remove karke **Student** ko alag table mein store karna hoga.\par
+\par
+3. **3rd Normal Form (3NF)**:  \par
+   - **Transitive Dependency** ka matlab hai ki non-key attribute kisi **non-key attribute** par depend na kare. Sirf primary key ke upar depend hona chahiye.  \par
+   - Example: Agar **StudentID** ke through aapka **StudentName** milta hai aur **StudentName** ke through **City** milta hai, toh **City** ko **StudentName** ke through store karna transitive dependency hai. Yeh remove karke **City** ko **Student** table ke attributes ke saath store karna hoga.\par
+\par
+---\par
+\par
+, toh **City** ko **StudentID** ke directly depend hona chahiye, na ki **StudentName** ke.\par
+\par
+In short, **Normalization** ka main goal hota hai data ko properly structure karna, taaki database ki efficiency, consistency aur integrity maintain ho sake.\par
+\par
+**Primary Keys** aur **Foreign Keys** relational databases mein key concepts hain jo data ko uniquely identify karte hain aur tables ke beech relationships establish karte hain.\par
+\par
+### **Primary Key:**\par
+- **Primary key** ek unique identifier hota hai har record (row) ke liye table mein.\par
+- Har table mein ek hi **primary key** hoti hai.\par
+- **Primary key** ko use karke hum kisi bhi record ko uniquely identify kar sakte hain, aur is key ke under **duplicate values** allowed nahi hote.\par
+- **Null values** bhi allowed nahi hoti primary key mein.\par
+  \par
+**Example:**\par
+- Agar humare paas ek **Student** table hai, toh **StudentID** ko primary key banaya ja sakta hai, kyunki har student ka ID unique hoga.\par
+  \par
+| StudentID (Primary Key) | Name    | Age |\par
+|-------------------------|---------|-----|\par
+| 1                       | John    | 20  |\par
+| 2                       | Sara    | 22  |\par
+| 3                       | Mike    | 21  |\par
+\par
+Yahan **StudentID** ek primary key hai, jo har student ko uniquely identify karti hai.\par
+\par
+### **Foreign Key:**\par
+- **Foreign key** ek attribute (ya set of attributes) hota hai jo **ek table ko doosre table ke saath link karta hai**.\par
+- **Foreign key** us table ki **primary key** ko refer karta hai jisme relationship establish ho rahi hoti hai.\par
+- Foreign key ki madad se hum tables ke beech relationships bana sakte hain, jaise **one-to-many** ya **many-to-many** relationships.\par
+\par
+**Example:**\par
+- Agar humare paas ek **Student** table aur ek **Course** table hai, aur har student ka ek course mein enrollment hai, toh **CourseID** ko foreign key bana sakte hain, jo **Course** table ki primary key ko refer karega.\par
+\par
+**Student Table:**\par
+\par
+| StudentID (Primary Key) | Name    | CourseID (Foreign Key) |\par
+|-------------------------|---------|------------------------|\par
+| 1                       | John    | 101                    |\par
+| 2                       | Sara    | 102                    |\par
+| 3                       | Mike    | 101                    |\par
+\par
+**Course Table:**\par
+\par
+| CourseID (Primary Key) | CourseName       |\par
+|------------------------|------------------|\par
+| 101                    | Math             |\par
+| 102                    | Science          |\par
+\par
+Yahan **CourseID** ek foreign key hai **Student** table mein, jo **Course** table ki primary key ko refer karta hai.\par
+\par
+### **Key Differences:**\par
+\par
+| Feature        | Primary Key                       | Foreign Key                        |\par
+|----------------|-----------------------------------|------------------------------------|\par
+| Purpose        | Uniquely identifies a record      | Creates a relationship between tables |\par
+| Uniqueness     | Values must be unique             | Values can repeat                  |\par
+| Null Values    | Cannot be null                    | Can have null values               |\par
+| Table          | Belongs to one table              | Belongs to the referencing table   |\par
+\par
+In short, **Primary Key** record ko uniquely identify karta hai, aur **Foreign Key** doosre table ki primary key ko refer karke tables ke beech relationship establish karta hai.\par
+\par
+**DDL**, **DML**, aur **DCL** SQL (Structured Query Language) ke different types of commands hain jo database operations ko manage karte hain. Inka kaam data ko define, manipulate, aur control karna hai. Let\rquote s explore them in short:\par
+\par
+### 1. **DDL (Data Definition Language):**\par
+DDL commands ka use database aur tables ka structure define karne ke liye hota hai, jaise tables create karna, modify karna, ya delete karna.\par
+\par
+- **Common DDL Commands:**\par
+  - **CREATE**: Naye database ya table ko create karta hai.\par
+  - **ALTER**: Already existing table ko modify karta hai (column add, modify, ya delete).\par
+  - **DROP**: Database ya table ko delete karta hai.\par
+  - **TRUNCATE**: Table ke sare records ko remove karna (structure ko nahi).\par
+\par
+**Examples:**\par
+- `CREATE TABLE Students (StudentID INT, Name VARCHAR(50));`  \par
+  (New table **Students** create kar raha hai.)\par
+  \par
+- `ALTER TABLE Students ADD Age INT;`  \par
+  (Table me **Age** column add kar raha hai.)\par
+  \par
+- `DROP TABLE Students;`  \par
+  (Table **Students** ko delete kar raha hai.)\par
+\par
+### 2. **DML (Data Manipulation Language):**\par
+DML commands ka use actual data ko manipulate karne ke liye hota hai, jaise data ko insert karna, update karna, ya delete karna.\par
+\par
+- **Common DML Commands:**\par
+  - **SELECT**: Data ko retrieve (read) karta hai.\par
+  - **INSERT**: Naye data ko insert karta hai.\par
+  - **UPDATE**: Existing data ko modify karta hai.\par
+  - **DELETE**: Data ko delete karta hai.\par
+\par
+**Examples:**\par
+- `SELECT * FROM Students;`  \par
+  (All records ko **Students** table se retrieve kar raha hai.)\par
+\par
+- `INSERT INTO Students (StudentID, Name, Age) VALUES (1, 'John', 20);`  \par
+  (Naye record ko **Students** table mein insert kar raha hai.)\par
+\par
+- `UPDATE Students SET Age = 21 WHERE StudentID = 1;`  \par
+  (Record ko update kar raha hai jisme **StudentID** 1 hai.)\par
+\par
+- `DELETE FROM Students WHERE StudentID = 1;`  \par
+  (Record ko delete kar raha hai jisme **StudentID** 1 hai.)\par
+\par
+### 3. **DCL (Data Control Language):**\par
+DCL commands ka use database access control ko manage karne ke liye hota hai, jaise permissions dena ya revoke karna.\par
+\par
+- **Common DCL Commands:**\par
+  - **GRANT**: User ko specific permissions dega (jaise SELECT, INSERT, UPDATE).\par
+  - **REVOKE**: User ke permissions ko remove karna.\par
+\par
+**Examples:**\par
+- `GRANT SELECT ON Students TO User1;`  \par
+  (User1 ko **Students** table par **SELECT** permission de raha hai.)\par
+  \par
+- `REVOKE DELETE ON Students FROM User1;`  \par
+  (User1 se **DELETE** permission ko revoke kar raha hai.)\par
+\par
+### Summary Table:\par
+\par
+| Type  | Full Form                    | Purpose                                             | Example Command                                        |\par
+|-------|------------------------------|-----------------------------------------------------|--------------------------------------------------------|\par
+| **DDL** | Data Definition Language     | Defines the database structure (tables, columns, etc.) | `CREATE TABLE`, `ALTER TABLE`, `DROP TABLE`            |\par
+| **DML** | Data Manipulation Language   | Manages data inside tables (insert, update, delete) | `SELECT`, `INSERT`, `UPDATE`, `DELETE`                 |\par
+| **DCL** | Data Control Language        | Controls access permissions                        | `GRANT`, `REVOKE`                                      |\par
+\par
+In short:\par
+- **DDL**: Database structure define karta hai.\par
+- **DML**: Database mein data ko manipulate karta hai.\par
+- **DCL**: Permissions ko manage karta hai.\par
+\par
+**DELETE** aur **TRUNCATE** dono SQL commands hain jo data ko remove karte hain, lekin in dono mein kuch important differences hote hain:\par
+\par
+### **1. DELETE:**\par
+- **Functionality**: DELETE command table ke rows ko remove karta hai, lekin **structure** ko unaffected rakhta hai (table ka structure, columns, aur constraints remain the same).\par
+- **Row-by-Row Deletion**: DELETE command har row ko ek-ek karke delete karta hai, isliye ismein time zyada lag sakta hai.\par
+- **Rollback**: DELETE command ko rollback kiya ja sakta hai (agar transaction ka use kiya gaya ho).\par
+- **Where Clause**: DELETE mein aap **WHERE** clause use kar sakte hain, jisse aap specific rows ko delete kar sakte hain.\par
+- **Triggers**: DELETE operation triggers ko activate kar sakta hai (agar triggers defined hain).\par
+\par
+**Example:**\par
+```sql\par
+DELETE FROM Students WHERE StudentID = 1;\par
+```\par
+Isse **StudentID = 1** wale row ko delete kiya jayega.\par
+\par
+### **2. TRUNCATE:**\par
+- **Functionality**: TRUNCATE command table ke sare rows ko remove karta hai, lekin table ka structure, columns, aur constraints unaffected rehte hain.\par
+- **All Rows Removed**: TRUNCATE command **sabhi rows ko ek sath delete karta hai** (no row-by-row operation), isliye yeh faster hota hai.\par
+- **No WHERE Clause**: TRUNCATE mein **WHERE** clause nahi hota, matlab yeh poore table ko clean kar deta hai.\par
+- **Rollback**: TRUNCATE ko rollback nahi kiya ja sakta hai (agar transaction ka use na ho).\par
+- **Triggers**: TRUNCATE operation triggers ko activate nahi karta hai.\par
+\par
+**Example:**\par
+```sql\par
+TRUNCATE TABLE Students;\par
+```\par
+Isse **Students** table ke sabhi rows delete ho jayenge.\par
+\par
+---\par
+\par
+### **Key Differences:**\par
+\par
+| Feature                | DELETE                            | TRUNCATE                        |\par
+|------------------------|-----------------------------------|---------------------------------|\par
+| **Operation**           | Row-by-row deletion               | All rows deleted at once        |\par
+| **Use of WHERE Clause** | Yes                               | No                              |\par
+| **Rollback**            | Can be rolled back (if in transaction) | Cannot be rolled back            |\par
+| **Triggers**            | Activates triggers (if defined)   | Does not activate triggers      |\par
+| **Speed**               | Slower (due to row-by-row deletion) | Faster (because it deletes all rows in one go) |\par
+| **Affects Structure**   | No (structure remains the same)   | No (structure remains the same) |\par
+  \par
+In short:\par
+- **DELETE**: Row-by-row operation, slow, allows WHERE clause, can be rolled back.\par
+- **TRUNCATE**: Faster, deletes all rows, no WHERE clause, cannot be rolled back.\par
+\par
+\par
+\f0\lang1033 ROLL BACK IS FOR UNDO\par
+\par
+\par
+**Constraints** SQL mein rules hote hain jo table ke data ko valid aur consistent banaye rakhte hain. Ye ensure karte hain ki data properly stored ho aur integrity maintain ho.\par
+\par
+### **Types of Constraints:**\par
+\par
+1. **PRIMARY KEY**:  \par
+   - Unique identifier hota hai, aur NULL nahi ho sakta.\par
+   - Example: `StudentID INT PRIMARY KEY`\par
+\par
+2. **FOREIGN KEY**:  \par
+   - Ek table ko doosre table se link karta hai.\par
+   - Example: `FOREIGN KEY (StudentID) REFERENCES Students(StudentID)`\par
+\par
+3. **UNIQUE**:  \par
+   - Column mein duplicate values allowed nahi hoti.\par
+   - Example: `Email VARCHAR(100) UNIQUE`\par
+\par
+4. **NOT NULL**:  \par
+   - Column mein NULL value nahi ho sakti.\par
+   - Example: `Name VARCHAR(50) NOT NULL`\par
+\par
+5. **CHECK**:  \par
+   - Data insert/update karte waqt condition apply karta hai.\par
+   - Example: `Age INT CHECK (Age >= 18)`\par
+\par
+6. **DEFAULT**:  \par
+   - Agar value na diya ho to default value set karta hai.\par
+   - Example: `Status VARCHAR(20) DEFAULT 'Active'`\par
+\par
+In short, **constraints** SQL mein data integrity ko maintain karne ke liye use hote hain.\par
+\par
+**Before** and **After** grouping ka matlab hai ki **WHERE** aur **HAVING** ka use kis stage par hota hai jab data ko group kiya ja raha ho.\par
+\par
+### **Before Grouping (WHERE)**:\par
+- Jab aap data ko **filter** karte hain **GROUP BY** ke pehle, to aap **WHERE** ka use karte hain. \par
+- **WHERE** condition ko **raw data** par apply kiya jata hai, jo grouping ke liye use ho raha hota hai.\par
+\par
+   **Example:**  \par
+   `WHERE Age > 18`  \par
+   Ye filter karta hai, sirf wo rows jinme Age 18 se zyada ho, aur phir un rows ko group kiya jata hai.\par
+\par
+### **After Grouping (HAVING)**:\par
+- Jab data ko **group** kar liya jata hai, aur uske baad aapko group ko **filter** karna ho, to aap **HAVING** ka use karte hain.\par
+- **HAVING** **grouped results** ko filter karta hai jo **aggregate functions** (jaise COUNT, SUM) ke baad evaluate hota hai.\par
+\par
+   **Example:**  \par
+   `HAVING COUNT(*) > 10`  \par
+   Ye filter karega, sirf wo groups jinmein 10 se zyada items ho.\par
+\par
+### Summary:\par
+- **WHERE**: Data ko **before grouping** filter karta hai.\par
+- **HAVING**: Data ko **after grouping** filter karta hai.\par
+\par
+**JOINs** SQL mein ek important concept hai, jo ek ya zyada tables ke data ko combine karta hai based on a related column. Jab aapko multiple tables se data fetch karna hota hai, tab JOINs ka use hota hai.\par
+\par
+### **Types of JOINs in SQL:**\par
+\par
+1. **INNER JOIN**:\par
+   - Ye **common rows** ko select karta hai jo dono tables mein match karte hain.\par
+   - Agar ek table mein row nahi hai jo doosre table se match karti ho, to wo row result mein nahi aayegi.\par
+\par
+   **Example:**\par
+   ```sql\par
+   SELECT Employees.Name, Departments.DepartmentName\par
+   FROM Employees\par
+   INNER JOIN Departments\par
+   ON Employees.DepartmentID = Departments.DepartmentID;\par
+   ```\par
+\par
+2. **LEFT JOIN (or LEFT OUTER JOIN)**:\par
+   - Ye **left table** ki saari rows ko select karta hai, chahe wo right table mein match kare ya nahi.\par
+   - Agar right table mein match nahi milta, to **NULL** values return hoti hain.\par
+\par
+   **Example:**\par
+   ```sql\par
+   SELECT Employees.Name, Departments.DepartmentName\par
+   FROM Employees\par
+   LEFT JOIN Departments\par
+   ON Employees.DepartmentID = Departments.DepartmentID;\par
+   ```\par
+\par
+3. **RIGHT JOIN (or RIGHT OUTER JOIN)**:\par
+   - Ye **right table** ki saari rows ko select karta hai, chahe wo left table mein match kare ya nahi.\par
+   - Agar left table mein match nahi milta, to **NULL** values return hoti hain.\par
+\par
+   **Example:**\par
+   ```sql\par
+   SELECT Employees.Name, Departments.DepartmentName\par
+   FROM Employees\par
+   RIGHT JOIN Departments\par
+   ON Employees.DepartmentID = Departments.DepartmentID;\par
+   ```\par
+\par
+4. **FULL JOIN (or FULL OUTER JOIN)**:\par
+   - Ye dono tables ki saari rows ko select karta hai, chahe unmein match ho ya na ho.\par
+   - Agar kisi table mein row match nahi karti, to wo **NULL** value ke saath show hoti hai.\par
+\par
+   **Example:**\par
+   ```sql\par
+   SELECT Employees.Name, Departments.DepartmentName\par
+   FROM Employees\par
+   FULL JOIN Departments\par
+   ON Employees.DepartmentID = Departments.DepartmentID;\par
+   ```\par
+\par
+5. **CROSS JOIN**:\par
+   - Ye dono tables ke **cartesian product** ko return karta hai, yani **har row** of the left table ko **har row** of the right table ke saath combine karta hai.\par
+   - Result mein bohot zyada rows aa sakti hain.\par
+\par
+   **Example:**\par
+   ```sql\par
+   SELECT Employees.Name, Departments.DepartmentName\par
+   FROM Employees\par
+   CROSS JOIN Departments;\par
+   ```\par
+\par
+6. **SELF JOIN**:\par
+   - Ye ek hi table ko **do alag alias** ke through join karta hai.\par
+   - Ye typically tab use hota hai jab ek table mein relationship ho, jaise employees aur unke managers ke beech.\par
+\par
+   **Example:**\par
+   ```sql\par
+   SELECT E.Name AS Employee, M.Name AS Manager\par
+   FROM Employees E\par
+   LEFT JOIN Employees M\par
+   ON E.ManagerID = M.EmployeeID;\par
+   ```\par
+\par
+### **Summary:**\par
+\par
+| JOIN Type             | Description                                                                 | Example Query |\par
+|-----------------------|-----------------------------------------------------------------------------|---------------|\par
+| **INNER JOIN**        | Only rows with matching data in both tables.                                | `INNER JOIN`  |\par
+| **LEFT JOIN**         | All rows from the left table, and matched rows from the right table.        | `LEFT JOIN`   |\par
+| **RIGHT JOIN**        | All rows from the right table, and matched rows from the left table.        | `RIGHT JOIN`  |\par
+| **FULL JOIN**         | All rows from both tables, with NULL where no match is found.               | `FULL JOIN`   |\par
+| **CROSS JOIN**        | Cartesian product of both tables (all combinations of rows).                | `CROSS JOIN`  |\par
+| **SELF JOIN**         | Joins a table with itself (typically using aliases).                        | `SELF JOIN`   |\par
+\par
+### **Key Takeaways**:\par
+- **INNER JOIN**: Only matching rows from both tables.\par
+- **LEFT JOIN**: All rows from the left table, and matching from the right.\par
+- **RIGHT JOIN**: All rows from the right table, and matching from the left.\par
+- **FULL JOIN**: All rows from both tables, with NULL where no match.\par
+- **CROSS JOIN**: All possible combinations of rows from both tables.\par
+- **SELF JOIN**: A table joined with itself.\par
+\par
+JOINs allow you to combine data from multiple tables in different ways, depending on your requirements.\par
+Summary:\par
+Left Table: The table mentioned first in the query.\par
+Right Table: The table mentioned second in the query (after the JOIN).\par
+\par
+**UNION** and **UNION ALL** are both used to combine the results of two or more **SELECT** queries, but they have a key difference:\par
+\par
+### **1. UNION:**\par
+- **Removes duplicates**: **UNION** combines the results of multiple **SELECT** queries and automatically removes any duplicate rows.\par
+- It ensures that each row in the result is **unique**.\par
+- Slower than **UNION ALL** because it checks for duplicates.\par
+\par
+**Example:**\par
+```sql\par
+SELECT Name FROM Employees\par
+UNION\par
+SELECT Name FROM Managers;\par
+```\par
+- In this example, if the same name appears in both the **Employees** and **Managers** tables, it will only show once in the result.\par
+\par
+### **2. UNION ALL:**\par
+- **Does not remove duplicates**: **UNION ALL** combines the results of multiple **SELECT** queries, but it includes **all** rows, even if they are duplicates.\par
+- It is **faster** than **UNION** because it does not need to check for duplicates.\par
+\par
+**Example:**\par
+```sql\par
+SELECT Name FROM Employees\par
+UNION ALL\par
+SELECT Name FROM Managers;\par
+```\par
+- In this example, if the same name appears in both the **Employees** and **Managers** tables, it will appear **twice** in the result.\par
+\par
+### **Key Differences:**\par
+| **Feature**       | **UNION**                          | **UNION ALL**                    |\par
+|-------------------|------------------------------------|----------------------------------|\par
+| **Duplicates**    | Removes duplicates                 | Includes duplicates              |\par
+| **Performance**   | Slower (due to duplicate checking)  | Faster (no duplicate checking)   |\par
+| **Use Case**      | When you need unique rows          | When you want all rows, including duplicates |\par
+\par
+### **When to Use**:\par
+- Use **UNION** when you need the final result to have no duplicates.\par
+- Use **UNION ALL** when you need all rows, including duplicates, and want better performance.\par
+\par
+To fetch **unique records** from a table, you can use the **`DISTINCT`** keyword in SQL. This keyword ensures that the results contain only unique rows, eliminating any duplicates.\par
+\par
+### **Syntax:**\par
+\par
+```sql\par
+SELECT DISTINCT column1, column2, ...\par
+FROM table_name;\par
+```\par
+\par
+### **Example:**\par
+\par
+Suppose we have an **Employees** table, and we want to get the unique **departments** in which employees work:\par
+\par
+```sql\par
+SELECT DISTINCT Department\par
+FROM Employees;\par
+```\par
+- This will return a list of **unique departments** from the **Employees** table, removing any duplicates.\par
+\par
+### **For Multiple Columns:**\par
+\par
+You can also use **`DISTINCT`** on multiple columns if you want to get unique combinations of values from those columns.\par
+\par
+For example, if you want to get unique combinations of **Department** and **Position**:\par
+\par
+```sql\par
+SELECT DISTINCT Department, Position\par
+FROM Employees;\par
+```\par
+- This will return unique combinations of **Department** and **Position** without any duplicates.\par
+\par
+### **Key Points:**\par
+- **`DISTINCT`** eliminates duplicate rows based on the columns you specify.\par
+- It works on one or more columns in the **SELECT** query.\par
+\par
+### **INNER JOIN** vs **OUTER JOIN**:\par
+\par
+**1. INNER JOIN**:\par
+- **Kya hai**: Ye join sirf un rows ko return karta hai jo dono tables mein match karti hain.\par
+- **Example**: Agar employee ko department ke saath match karna ho, to wo employee dikhega jo department mein ho.\par
+\par
+**2. OUTER JOIN**:\par
+- **Kya hai**: Ye join un rows ko bhi return karta hai jo ek table mein hoti hain, lekin doosre table mein match nahi karti. Agar match nahi hota to **NULL** dikhata hai.\par
+- **Types of OUTER JOINS**:\par
+  - **LEFT OUTER JOIN (LEFT JOIN)**: Left table ki saari rows aur matching right table rows. Agar right table mein match nahi hota to **NULL**.\par
+  - **RIGHT OUTER JOIN (RIGHT JOIN)**: Right table ki saari rows aur matching left table rows. Agar left table mein match nahi hota to **NULL**.\par
+  - **FULL OUTER JOIN**: Dono tables ki saari rows ko dikhata hai, agar match nahi hota to **NULL**.\par
+\par
+### **Example Queries**:\par
+\par
+```sql\par
+-- INNER JOIN: Matching rows dikhata hai\par
+SELECT Employees.Name, Departments.DepartmentName\par
+FROM Employees\par
+INNER JOIN Departments\par
+ON Employees.DepartmentID = Departments.DepartmentID;\par
+\par
+-- LEFT JOIN: Left table ki saari rows dikhata hai, matching right table rows ke saath\par
+SELECT Employees.Name, Departments.DepartmentName\par
+FROM Employees\par
+LEFT JOIN Departments\par
+ON Employees.DepartmentID = Departments.DepartmentID;\par
+\par
+-- RIGHT JOIN: Right table ki saari rows dikhata hai, matching left table rows ke saath\par
+SELECT Employees.Name, Departments.DepartmentName\par
+FROM Employees\par
+RIGHT JOIN Departments\par
+ON Employees.DepartmentID = Departments.DepartmentID;\par
+\par
+-- FULL OUTER JOIN: Dono tables ki saari rows dikhata hai, NULL agar match nahi ho\par
+SELECT Employees.Name, Departments.DepartmentName\par
+FROM Employees\par
+FULL OUTER JOIN Departments\par
+ON Employees.DepartmentID = Departments.DepartmentID;\par
+```\par
+\par
+### **Summary**:\par
+- **INNER JOIN**: Sirf matching rows ko dikhata hai.\par
+- **OUTER JOIN**: Non-matching rows ko bhi dikhata hai (NULL ke saath).\par
+  - **LEFT OUTER JOIN**: Left table ki saari rows dikhata hai.\par
+  - **RIGHT OUTER JOIN**: Right table ki saari rows dikhata hai.\par
+  - **FULL OUTER JOIN**: Dono tables ki saari rows dikhata hai.\par
+\cf1 ### **Difference Between Unique Key and Primary Key**:\par
+\par
+1. **Uniqueness**:\par
+   - **Primary Key**: Ek table mein **sirf ek primary key** hoti hai, jo ki **uniqueness** guarantee karti hai. Isme **NULL** values allowed nahi hoti.\par
+   - **Unique Key**: Unique key bhi **values ko unique** banati hai, lekin ek table mein **multiple unique keys** ho sakti hain. Isme **ek ya zyada NULL values** allow hoti hain (depending on the DBMS).\par
+\par
+2. **NULL Values**:\par
+   - **Primary Key**: Primary key me **NULL** nahi hoti.\par
+   - **Unique Key**: Unique key me **ek ya zyada NULL values** allow hoti hain.\par
+\par
+3. **Purpose**:\par
+   - **Primary Key**: Data ko uniquely identify karne ke liye use hoti hai. \par
+   - **Unique Key**: Table ke data ko ensure karne ke liye use hoti hai ki kisi column mein duplicate values na ho, lekin primary key ki tarah required nahi hoti.\par
+\par
+4. **Indexing**:\par
+   - **Primary Key**: Automatically **clustered index** create hota hai (agar explicitly nahi diya gaya ho).\par
+   - **Unique Key**: **Non-clustered index** automatically create hota hai.\par
+\par
+### **Example**:\par
+```sql\par
+-- Primary Key Example\par
+CREATE TABLE Employees (\par
+    EmployeeID INT PRIMARY KEY,\par
+    Name VARCHAR(100)\par
+);\par
+\par
+-- Unique Key Example\par
+CREATE TABLE Employees (\par
+    EmployeeID INT UNIQUE,\par
+    Email VARCHAR(100) UNIQUE,\par
+    Name VARCHAR(100)\par
+);\par
+```\par
+\par
+### **Summary**:\par
+- **Primary Key**: **Single**, **no NULLs**, unique identifier.\par
+- **Unique Key**: **Multiple allowed**, **NULLs allowed**, ensures uniqueness but not an identifier.\par
+\par
+\par
+\par
+\par
+### **1. How does GROUP BY work in SQL?**\par
+\par
+- **GROUP BY** ka use SQL mein rows ko ek ya zyada columns ke basis par group karne ke liye hota hai. Ye tab use hota hai jab aapko aggregate functions (jaise SUM, COUNT, AVG) apply karni hoti hain ek group of rows par.\par
+- **Example**:\par
+```sql\par
+SELECT Department, COUNT(*) \par
+FROM Employees \par
+GROUP BY Department;\par
+```\par
+- Is example mein, `GROUP BY` Employees ko unke department ke hisaab se group karega aur har department ka count dega.\par
+\par
+---\par
+\par
+### **2. What is the purpose of the ORDER BY clause?**\par
+\par
+- **ORDER BY** clause ka use SQL mein rows ko ascending (default) ya descending order mein sort karne ke liye hota hai. Aap specify karte hain kaunse columns par sorting karni hai.\par
+- **Example**:\par
+```sql\par
+SELECT Name, Salary \par
+FROM Employees \par
+ORDER BY Salary DESC;\par
+```\par
+- Is example mein, `ORDER BY` salary ko descending order mein sort karega.\par
+\par
+---\par
+\par
+### **3. What are aggregate functions in SQL? Give examples.**\par
+\par
+- **Aggregate Functions** SQL mein wo functions hain jo multiple rows ko ek single value mein convert karte hain.\par
+- **Common Aggregate Functions**:\par
+  - **COUNT()**: Rows ka count return karta hai.\par
+  - **SUM()**: Numeric values ka sum return karta hai.\par
+  - **AVG()**: Numeric values ka average return karta hai.\par
+  - **MIN()**: Minimum value return karta hai.\par
+  - **MAX()**: Maximum value return karta hai.\par
+\par
+**Examples**:\par
+```sql\par
+SELECT COUNT(*) FROM Employees; -- Count of all employees\par
+SELECT SUM(Salary) FROM Employees; -- Total salary of all employees\par
+SELECT AVG(Salary) FROM Employees; -- Average salary of all employees\par
+SELECT MIN(Salary) FROM Employees; -- Minimum salary\par
+SELECT MAX(Salary) FROM Employees; -- Maximum salary\par
+```\par
+\par
+---\par
+\par
+### **4. What is the difference between COUNT(*) and COUNT(column_name)?**\par
+\par
+- **COUNT(*)**: Sabhi rows ka count karta hai, chahe wo NULL ho ya non-NULL.\par
+- **COUNT(column_name)**: **Sirf non-NULL values** ka count karta hai us particular column mein.\par
+\par
+**Example**:\par
+```sql\par
+SELECT COUNT(*) FROM Employees; -- Count of all rows (including NULLs)\par
+SELECT COUNT(Salary) FROM Employees; -- Count of non-NULL salary values\par
+```\par
+\par
+---\par
+\par
+### **5. What are subqueries? How are they different from JOINs?**\par
+\par
+- **Subqueries**: Ye ek query hoti hai jo doosri query ke andar hoti hai. Subqueries ko `SELECT`, `INSERT`, `UPDATE`, ya `DELETE` statement ke andar use kiya ja sakta hai.\par
+  - **Example**:\par
+  ```sql\par
+  SELECT Name FROM Employees \par
+  WHERE DepartmentID = (SELECT DepartmentID FROM Departments WHERE DepartmentName = 'Sales');\par
+  ```\par
+  - Is example mein, ek query department ka ID search kar rahi hai aur doosri query employee ka name fetch kar rahi hai.\par
+\par
+- **JOINs**: JOINs ka use tables ko combine karne ke liye hota hai jab aapko ek hi query mein multiple tables ke data ko fetch karna ho.\par
+  - **Example**:\par
+  ```sql\par
+  SELECT Employees.Name, Departments.DepartmentName\par
+  FROM Employees\par
+  JOIN Departments ON Employees.DepartmentID = Departments.DepartmentID;\par
+  ```\par
+\par
+**Difference**:\par
+- **Subqueries** ek query ke andar hoti hai aur doosri query se data fetch karte hain, jabki **JOINs** tables ko combine karne ke liye use hote hain. Subqueries ko multiple rows ya single value return karne ke liye use kiya ja sakta hai, lekin JOINs directly tables ko join karte hain.\par
+\par
+--- \par
+\par
+### **Summary**:\par
+1. **GROUP BY**: Rows ko group karne ke liye, aggregate functions ko apply karne ke liye.\par
+2. **ORDER BY**: Rows ko ascending ya descending order mein sort karne ke liye.\par
+3. **Aggregate Functions**: Functions jo multiple rows ko ek value mein convert karte hain (COUNT, SUM, AVG, MIN, MAX).\par
+4. **COUNT(*)**: Sabhi rows ka count, **COUNT(column_name)**: Non-NULL values ka count.\par
+5. **Subqueries**: Queries jo doosri query ke andar hoti hain, **JOINs** tables ko combine karte hain.\par
+\par
+\par
+### **What are Queries?**\par
+\par
+- **Query** SQL mein ek request hoti hai jo database se data retrieve karne, modify karne, insert karne, ya delete karne ke liye hoti hai.\par
+- SQL queries ko likhne ka main purpose hota hai data ko retrieve ya manipulate karna according to the user's requirements.\par
+\par
+### **Types of Queries**:\par
+1. **SELECT Query**: Data ko fetch karne ke liye use hota hai.\par
+   - **Example**: `SELECT * FROM Employees;`\par
+2. **INSERT Query**: Naya data insert karne ke liye use hota hai.\par
+   - **Example**: `INSERT INTO Employees (Name, Salary) VALUES ('John Doe', 50000);`\par
+3. **UPDATE Query**: Existing data ko modify karne ke liye use hota hai.\par
+   - **Example**: `UPDATE Employees SET Salary = 55000 WHERE EmployeeID = 1;`\par
+4. **DELETE Query**: Data ko delete karne ke liye use hota hai.\par
+   - **Example**: `DELETE FROM Employees WHERE EmployeeID = 1;`\par
+\par
+### **Summary**:\par
+- **Query** SQL mein ek instruction hoti hai jo data ko retrieve ya manipulate karne ke liye execute ki jati hai. Queries ka use data ko fetch karne, insert karne, update karne, aur delete karne ke liye hota hai.\cf0\par
+\f1\lang9\par
+\par
+}
+ 

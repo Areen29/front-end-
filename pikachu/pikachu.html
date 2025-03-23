@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikachu Jump</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url('./park.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+           
+            place-items: center;
+        }
+
+        .trampoline {
+            position: absolute;
+            left: 820px;
+            width: 300px;
+            bottom: 0px;
+        }
+
+        .pikachu {
+            position: absolute;
+            bottom: 150px;
+            height: 150px;
+            width: 150px;
+            left: 890px;
+            transition: bottom 0.3s ease, transform 0.3s ease;
+        }
+
+        .pikachu:hover  {
+            bottom: 250px;
+            transform: scale(1.3);
+        }
+        p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            position: absolute;
+            right: 945px;
+            bottom: 4s00px;
+        }
+        .shadow {
+            position: absolute;
+            bottom: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <img src="./vecteezy_trampoline-for-kids_54402415.png" alt="Trampoline" class="trampoline">
+    <div class="shadow"></div>
+    <img src="./p2.png"  class="pikachu">
+    <p>Tap To Jump</p>
+</body>
+</html>

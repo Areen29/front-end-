@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Validation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+    <style>
+       .error {
+        background-color: rgb(77, 138, 193);
+        color: brown;
+        font-family: 'Times New Roman', Times, serif;
+       }
+       #frm label {
+        color: chocolate;
+       }
+       #frm {
+        border: 2px solid black;
+        width: 350px;
+       }
+    </style>
+</head>
+<body>
+    <form id="frm">
+        <label>Cardholder Name</label>
+        <input type="text" name="name" placeholder="Enter Cardholder Name"><br><br>
+
+        <label>Card Number</label>
+        <input type="text" name="cardNumber" placeholder="Enter Card Number"><br><br>
+
+        <label>Expiry Date (MM/YY)</label>
+        <input type="text" name="expiryDate" placeholder="MM/YY"><br><br>
+
+        <label>3-Digit Code</label>
+        <input type="text" name="threeDigitCode" placeholder="Enter 3-Digit Code"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $.validator.addMethod("validExpiry", function (value, element) {
+                let regex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+                return this.optional(element) || regex.test(value);
+            }, "Enter a valid expiry date in MM/YY format (MM should be 01-12)");
+
+            $('#frm').validate({
+                rules: {
+                    name: "required",
+                    cardNumber: {
+                        required: true,
+                        digits: true,
+                        minlength: 16,
+                        maxlength: 16
+                    },
+                    expiryDate: {
+                        required: true,
+                        validExpiry: true
+                    },
+                    threeDigitCode: {
+                        required: true,
+                        digits: true,
+                        minlength: 3,
+                        maxlength: 3
+                    }
+                },
+                messages: {
+                    name: "Please enter the cardholder's name",
+                    cardNumber: {
+                        required: "Please enter your card number",
+                        digits: "Only numbers are allowed",
+                        minlength: "Card number must be 16 digits",
+                        maxlength: "Card number must be 16 digits"
+                    },
+                    expiryDate: {
+                        required: "Please enter expiry date",
+                        validExpiry: "Enter a valid expiry date in MM/YY format (MM should be 01-12)"
+                    },
+                    threeDigitCode: {
+                        required: "Please enter the 3-digit code",
+                        digits: "Only numbers are allowed",
+                        minlength: "Code must be exactly 3 digits",
+                        maxlength: "Code must be exactly 3 digits"
+                    }
+                },
+                submitHandler: function (form) {
+                    form.submit();
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

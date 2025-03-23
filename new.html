@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery Website</title>
+    
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        .slider img, .swiper-slide img { width: 100%; max-height: 400px; object-fit: cover; }
+        .swiper { width: 80%; height: 400px; margin: auto; }
+        .faq { width: 80%; margin: auto; text-align: left; }
+        .gallery img { width: 30%; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Slick.js Carousel</h2>
+    <div class="slider">
+        <div><img src="./bk.jpeg"Image 1"></div>
+        <div><img src="./background.jpeg" alt="Image 2"></div>
+        <div><img src="./background.jpeg" alt="Image 3"></div>
+    </div>
+
+    <h2>FAQ Section</h2>
+    <div class="faq">
+        <button class="accordion">What is this website about?</button>
+        <div class="panel"><p>This is a photo gallery website.</p></div>
+        <button class="accordion">How do I book an appointment?</button>
+        <div class="panel"><p>Use the embedded Google Calendar below.</p></div>
+    </div>
+
+    <h2>Image Gallery</h2>
+    <div class="gallery">
+        <a href="./spring.jpg" data-lightbox="gallery"><img src="./greenery.jpg" alt="Gallery Image"></a>
+        <a href="./background.jpeg" data-lightbox="gallery"><img src="./background.jpeg" alt="Gallery Image"></a>
+        <a href="./background.jpeg" data-lightbox="gallery"><img src="./background.jpeg" alt="Gallery Image"></a>
+    </div>
+
+    <h2>Google Calendar Booking</h2>
+    <iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    
+    <h2>Share This Page</h2>
+    <div>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=yourwebsite.com" target="_blank">Share on Facebook</a>
+        <a href="https://twitter.com/intent/tweet?url=yourwebsite.com" target="_blank">Share on Twitter</a>
+    </div>
+
+    <!-- jQuery & Slick JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
+    <script>
+        // Initialize Slick Carousel
+        $(document).ready(function(){
+            $('.slider').slick({
+                autoplay: true,
+                dots: true,
+                arrows: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+
+        // Initialize Swiper Carousel
+        var swiper = new Swiper(".mySwiper", {
+            autoplay: { delay: 2000 },
+            loop: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
+        });
+        
+        // FAQ Accordion
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                panel.style.display = (panel.style.display === "block") ? "none" : "block";
+            });
+        }
+    </script>
+</body>
+</html>

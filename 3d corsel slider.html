@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery Website</title>
+    
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        .slider img, .swiper-slide img { width: 100%; max-height: 400px; object-fit: cover; }
+        .swiper { width: 80%; height: 400px; margin: auto; }
+        .faq { width: 80%; margin: auto; text-align: left; }
+        .gallery img { width: 30%; margin: 5px; cursor: pointer; }
+        
+        /* 3D Carousel Styles */
+        .carousel-container {
+            perspective: 1000px;
+            width: 300px;
+            margin: auto;
+            position: relative;
+        }
+        .carousel {
+            width: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotate 10s infinite linear;
+        }
+        .carousel img {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform-origin: center;
+            backface-visibility: hidden;
+        }
+        @keyframes rotate {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h2>3D Carousel</h2>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="./beautiful-fall-nature-scenery.jpg" alt="Image 1" style="transform: rotateY(0deg) translateZ(200px);">
+            <img src="./background.jpeg" alt="Image 2" style="transform: rotateY(120deg) translateZ(200px);">
+            <img src="./bk.jpeg" alt="Image 3" style="transform: rotateY(240deg) translateZ(200px);">
+        </div>
+    </div>
+
+    <!-- jQuery & Slick JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>

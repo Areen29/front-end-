@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Words</title>
+</head>
+<body>
+    <script> 
+      function numberToWords(num) {
+    if (num < 100 || num > 999) {
+        document.write("Enter a three-digit number.");
+        return;
+    }
+    let ones = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+    let teens = ["Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+    let tens = ["", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+    let h = (num - (num % 100)) / 100; 
+    let t = ((num % 100) - (num % 10)) / 10;
+    let o = num % 10; 
+    let words = ones[h] + " Hundred";
+    if (t == 1 && o !== 0) {
+        words = words + " " + teens[o ];
+    } else {
+        if (t > 0) {
+            words = words + " " + tens[t]; 
+        }
+        if (o > 0) {
+            words = words + " " + ones[o]; 
+        }
+    }
+    document.write(words); 
+}
+numberToWords(parseInt(prompt("Enter a three-digit number:")));
+    </script>
+</body>
+</html>

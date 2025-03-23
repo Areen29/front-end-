@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .todo-list {
+      border-collapse: collapse;
+    }
+    .todo-list th, .todo-list td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="tb">
+    <table class="todo-list">
+      <tr>
+        <th>Task No</th>
+        <th>Task</th>
+        <th>Actions</th>
+      </tr>
+    </table>
+    <button class="add-row">Add Row</button>
+  </div>
+
+  <script>
+    let todo = ['Washing clothes', 'Cooking', 'Feeding the cat', 'Getting ready for a party'];
+
+    function list_to_do() {
+      $('.todo-list').empty();
+      $('.todo-list').append('<tr><th>Task No</th><th>Task</th><th>Actions</th></tr>');
+      for (let i = 0; i < todo.length; i++) {
+        $('.todo-list').append(`
+          <tr>
+            <td>${i + 1}</td>
+            <td class="task-cell" data-index="${i}">${todo[i]}</td>
+            <td>
+              <button class="edit" data-index="${i}">Edit</button>
+              <button class="delete-row" data-index="${i}">Delete</button>
+            </td>
+          </tr>
+        `);
+      }
+    }
+
+    list_to_do();
+
+    $(document).on('click', '.edit', function() {
+      let index = $(this).data('index');
+      let cell = $(`.task-cell[data-index="${index}"]`);
+      
+      if (!cell.find('input').length) {
+        let currentValue = cell.text();
+        cell.html(`<input type="text" class="edit-input" value="${currentValue}" data-index="${index}">`);
+      }
+    });
+
+    $(document).on('blur', '.edit-input', function() {
+      let index = $(this).data('index');
+      let newValue = $(this).val();
+      todo[index] = newValue;
+      list_to_do();
+    });
+
+    $(document).on('click', '.delete-row', function() {
+      let index = $(this).data('index');
+      todo.splice(index, 1);
+      list_to_do();
+    });
+
+    $('.add-row').click(function() {
+      todo.push('New Task');
+      list_to_do();
+    });
+  </script>
+</body>
+</html>

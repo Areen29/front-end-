@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ATM Withdrawal</title>
+</head>
+
+<body>
+    <script>
+        let amount = parseInt(prompt("Enter the withdrawal amount "), 10)
+        amount -= amount % 10
+        let notes5000 = parseInt(amount / 5000)
+        amount %= 5000
+        let notes1000 = parseInt(amount / 1000)
+        amount %= 1000
+        let notes500 = parseInt(amount / 500)
+        amount %= 500
+        let notes100 = parseInt(amount / 100)
+        amount %= 100
+        let notes50 = parseInt(amount / 50)
+        amount %= 50
+        let notes20 = parseInt(amount / 20)
+        amount %= 20
+        let notes10 = parseInt(amount / 10)
+        if (notes5000 > 0) document.write(notes5000 + " x 5000 notes<br>")
+        if (notes1000 > 0) document.write(notes1000 + " x 1000 notes<br>")
+        if (notes500 > 0) document.write(notes500 + " x 500 notes<br>")
+        if (notes100 > 0) document.write(notes100 + " x 100 notes<br>")
+        if (notes50 > 0) document.write(notes50 + " x 50 notes<br>")
+        if (notes20 > 0) document.write(notes20 + " x 20 notes<br>")
+        if (notes10 > 0) document.write(notes10 + " x 10 notes<br>")
+    </script>
+</body>
+
+</html>

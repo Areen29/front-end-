@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexcent - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cta-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .cta-buttons .login {
+            background-color: white;
+            color: #333;
+            border: 1px solid #e5e7eb;
+        }
+
+        .cta-buttons .signup {
+            background-color: #22c55e;
+            color: white;
+            border: none;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 40px;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            color: #333;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #6b7280;
+        }
+
+        .hero-text .register {
+            text-decoration: none;
+            background-color: #22c55e;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .clients {
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .clients h2 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        .clients p {
+            color: #6b7280;
+        }
+
+        .clients-logos {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .clients-logos img {
+            max-width: 100px;
+            height: auto;
+            opacity: 0.7;
+        }
+
+        .features {
+            padding: 60px 40px;
+        }
+
+        .features h2 {
+            font-size: 32px;
+            text-align: center;
+            color: #333;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .feature p {
+            color: #6b7280;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        footer p {
+            margin: 0;
+            color: #6b7280;
+        }
+
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero {
+                padding: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .clients-logos {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Nexcent</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="cta-buttons">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="signup">Sign up</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Lessons and insights <br> <span style="color: #22c55e;">from 8 years</span></h1>
+            <p>Where to grow your business as a photographer: site or social media?</p>
+            <a href="#" class="register">Register</a>
+        </div>
+        <div class="hero-image">
+            <img src="./nexcent_img-removebg-preview.png">
+        </div>
+    </div>
+
+    <div class="clients">
+        <h2>Our Clients</h2>
+        <p>We have been working with some Fortune 500+ clients</p>
+        <div class="clients-logos">
+            <img src="./logo.png" alt="Client 1">
+            <img src="./logo.png" alt="Client 2">
+            <img src="./logo.png" alt="Client 3">
+            <img src="./logo.png" alt="Client 4">
+        </div>
+    </div>
+
+    <div class="features">
+        <h2>Manage your entire community <br> in a single system</h2>
+        <p style="text-align: center;">Who is Nexcent suitable for?</p>
+        <div class="features-grid">
+            <div class="feature">
+                <h3>Membership Organisations</h3>
+                <p>Our membership management software provides full automation of membership renewals and payments.</p>
+            </div>
+            <div class="feature">
+                <h3>National Associations</h3>
+                <p>Our membership management software provides full automation of membership renewals and payments.</p>
+            </div>
+            <div class="feature">
+                <h3>Clubs and Groups</h3>
+                <p>Our membership management software provides full automation of membership renewals and payments.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Nexcent. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
