@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("Welcome to my website");
+        let member= prompt("Are you a VIP member?");
+        let badge=prompt(" Do you Have A Badge");
+        let ticket=prompt("Do you Have A VIP Ticket");
+        let age= prompt("Please Enter your age");
+        let time= prompt("Please Enter the time");
+       
+        if(member=='yes'){
+        if (badge = 'yes' && age>=18 ){
+            document.write("you can enter");
+        }
+      
+        else if (ticket = 'yes' && age>=18 ){
+            document.write("you can enter");
+        }
+        else if (ticket = 'yes' && badge == 'yes' && age>=18){
+            document.write("You are VIP member . You have priority access");
+        }
+        else if( !badge=='yes' && time>10){
+            document.write("You can not enter after 10pm");
+        }
+        else if( !badge=='yes' && time<10){
+            document.write("You can  enter ");
+        }
+    }
+       else{
+        document.write("You can not enter");
+      }
+
+    </script>
+</body>
+</html>

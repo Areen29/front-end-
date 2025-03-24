@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <select name=" "id="main">
+        <option value=" ">Select any object</option>
+    </select>
+        <select name="" id="sub">
+           
+    </select>
+    <script>
+        let json = {
+            "fruits":["Apple","Mango","Strawberry"],
+            "vegetables":["Potato","tomato","Cabage"]
+        }
+        
+        for (const key in json) {
+            
+            $('#main').append(`<option>${key}</option`)
+                
+            }
+      $('#main').change(function(){
+        let selected = $(this).val();
+        $('#sub').empty();
+        $('#sub').append( `<option value="">Select any option</option>`)
+   
+        for (const element of json[selected]) {
+            $('#sub').append(`<option>${element}</option>`)
+        }
+      })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+
+    .dropdown-content,.dropdown-subcontent{
+        display: none;
+    }
+    .dropdown:hover .dropdown-content{
+        display: block;
+    }
+    .dropdown-content ul :nth-child(1):hover +.dropdown-subcontent{
+        display: block;
+    }
+    li{
+        display: block;
+        border: 1px solid black;
+        height: 30px;
+        width: 60px;
+    }
+.dropdown-subcontent{
+    position: absolute;
+    top: 55px;
+    left: 68px;
+}
+</style>
+<body>
+    <div class="dropdown">
+        <button class="dropdown-button">Movies Slots</button>
+        <div class="dropdown-content">
+            <ul>
+                <li>Kids </li>
+                <div class="dropdown-subcontent">
+                    <ul>
+                        <li>8:00-9:00 </li>
+                        <li>9:00-10:00 </li>
+                        <li>10:00-11:00 </li>
+        
+                    </ul>
+                </div>
+                <li>Adults </li>
+                <li>Horror </li>
+                <li>Funny </li>
+
+                
+            </ul>
+        </div>
+       
+    </div>
+</body>
+</html>

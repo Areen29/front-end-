@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+   
+    
+    <div class="products">
+        <div class="product" data-prize = "200">
+            <h1>Soap</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit officiis officia sapiente totam impedit, sunt dolore eius quos corrupti aperiam.</p>
+            <button>Show prize</button>
+        </div>
+        <div class="product" data-prize = "100">
+            <h1>Shampo</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit officiis officia sapiente totam impedit, sunt dolore eius quos corrupti aperiam.</p>
+            <button>Show prize</button>
+        </div>
+        <div class="product" data-prize = "50">
+            <h1>Biscuit</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit officiis officia sapiente totam impedit, sunt dolore eius quos corrupti aperiam.</p>
+            <button>Show prize</button>
+        </div>
+        <div class="product" data-prize = "free">
+            <h1>Chips</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit officiis officia sapiente totam impedit, sunt dolore eius quos corrupti aperiam.</p>
+            <button>Show prize</button>
+        </div>
+    </div>
+    <button class="filter">Filter expensive</button>
+    <script>
+        let alert=$('<div></div>')
+        alert.css('border','1px solid black').css('backgroundColor','black').css('color','white');
+        $('body').append(alert);
+        let button = $('.products').find('.product button');
+        button.click(function(){
+            let a=$(this).closest('.product')
+            alert.css('dispaly','block');
+            alert.text("This objects price is"+a.data('prize'));
+        })
+        let b= $('.filter').click(function(){
+            $('.products').children().filter(function(){
+                return $(this).data('prize')>=500;
+                
+                
+            }).css('backgroundColor','green')
+        })
+
+       
+    </script>
+</body>
+</html>

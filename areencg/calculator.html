@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>calculator</title>
+</head>
+<body>
+  
+    <select name="c" id="main">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="X">x</option>
+    <option value="/">/</option>
+    
+</select>
+
+    <input type="number" id="a">
+    <input type="number" id="b">
+    <button id="btn">=</button>
+    <script>
+    
+        let button=$('#btn');
+      button.on('click',function(){
+        let a= Number($('#a').val());
+        let b=Number($('#b').val());
+        let selected = $("#main").val();
+      
+       if(selected== '+'){
+        document.write(a + b);
+       }
+       else if(selected== '-'){
+        document.write(a - b);
+       }
+       else if(selected== "X"){
+        document.write(a * b);
+       }
+       else{
+        document.write(a/b);
+       }})
+
+
+</script>
+
+    
+</body>
+</html>

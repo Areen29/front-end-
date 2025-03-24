@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+<div class="tb">
+    <table class="todo-list">
+        <tr>
+            <th>task no</th>
+            <th>task</th>
+        </tr>
+    </table>
+</div>
+    <script>
+        let todo = ['washing clothes','cook','Feed the cat','Ready for party'];
+function list_to_do(){
+    for(i=0; i<todo.length; i++){
+        $('.todo-list').append(`<tr><td>${i+1}</td><td>${todo[i]}</td></tr>`);
+    }
+    $('.todo-list').css('border','1px solid black');
+    
+    $('.todo-list').find('tr td ').css('border','1px solid black');
+}
+
+        
+        let button=$('<button class="delete">Delete The Task</button>');
+        $('.tb').append(button);
+        $('.delete').click(function(){
+             todo.pop();
+             list_to_do();
+             
+        })
+
+        
+     
+        
+        
+    </script>
+</body>
+</html>

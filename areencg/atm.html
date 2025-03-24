@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let c=10000;
+        let user=prompt("Press D to deposit your amount \n Press W to withdraw your amount\nPress C to check your current balance");
+        function deposit(d){        
+            c=d+c;
+            document.write(c);
+        }
+        function withdraw(w){
+            c=c-w;
+            document.write(c);
+        }
+        function check_balance(){
+            document.write(c);
+        }
+        
+        if(user=="D"){
+            let d=parseInt(prompt("Enter the amount to deposit"));
+            
+            deposit(d);
+        }
+        else if(user=="W" ){
+             let w=parseInt(prompt("Enter the amount to withdraw"));
+             if(w>c){
+                document.write("Please Enter The Invalid Amount");
+             }
+             else{
+            withdraw(w);
+             }
+        }
+        else {
+            check_balance(c);
+        }
+       
+      
+      
+        
+       
+
+        
+    </script>
+    
+</body>
+</html>

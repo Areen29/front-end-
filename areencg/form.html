@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"
+        integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .error {
+            background-color: beige;
+            color: red;
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Login Form</h2>
+    <form class="frm">
+        <input type="text" name="name" placeholder="Your Name"><br><br>
+        <input type="text" name="email" placeholder="Your Email"><br><br>
+        <input type="number" name="contact" placeholder="Your Contact.no"><br><br>
+        <input type="password" name="password" placeholder="Enter Your Password"><br><br>
+        <button type="submit" id="btn">Submit</button>
+
+    </form>
+    <script>
+
+        $('.frm').validate({
+            rules: {
+                name: 'required',
+                email: {
+                    required: true,
+                    email: true
+                },
+                contact: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 12
+                },
+                password: {
+                    required: true,
+                    minlength: 8,
+                    pattern: '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/'
+                }
+            }, messages: {
+                name: "Enter Your Name"
+                ,
+                contact: {
+                    required: 'Enter contact.no',
+                    minlength: "Enter a valid contact no",
+                    maxlength: "Enter a valid contact no"
+                },
+                email: {
+                    required: "Enter Your Email address",
+                    email: "Enter a valid email"
+                },
+                password: {
+                    required: "Enter a password",
+                    minlength: "Your password must be 8 of atleast characters",
+                    pattern: "Your Password must contain a uppercase letter a lower case a numeric value and charcter"
+                }
+            }
+            , submitH: function (form) {
+                form.submit()
+            }
+        })
+    </script>
+
+</body>
+
+</html>
